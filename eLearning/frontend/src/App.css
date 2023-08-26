@@ -1156,5 +1156,5 @@ select:focus {
 
 #course:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border-bottom: 4px solid darkcyan;
+  border-bottom: 4px solid #04aa6d;
 }
