@@ -1,7 +1,5 @@
-import { Link } from 'react-router-dom'
-import '../App.css'
-
-
+import { Link } from "react-router-dom";
+import "../App.css";
 
 const Admin = () => {
   return (
@@ -38,7 +36,6 @@ const Admin = () => {
                       </Link>
                     </div>
                   </div>
-
                 </div>
                 <div className="col-12 d-flex align-items-center">
                   <form className="input-group">
@@ -93,15 +90,11 @@ const Admin = () => {
                     </Link>
                   </div>
                 </div>
-
-
               </div>
             </div>
           </div>
         </div>
       </div>
-
-
     </>
   );
 };

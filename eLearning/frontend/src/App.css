@@ -1,3 +1,6 @@
+* {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: "Josefin Sans", sans-serif;
@@ -236,7 +239,8 @@ textarea:focus {
 /* NEWSLATTER */
 .subscribe-section {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.594), rgba(0, 0, 0, 0.226)),
-    url("https://www.pexels.com/photo/woman-working-at-home-using-her-laptop-4050290/") no-repeat scroll center / cover;
+    url("https://www.pexels.com/photo/woman-working-at-home-using-her-laptop-4050290/")
+      no-repeat scroll center / cover;
   padding: 100px 0 100px;
 }
 
@@ -567,8 +571,6 @@ textarea:focus {
   width: 100%;
 }
 
-
-
 .remove-button {
   background-color: red;
   width: 25px;
@@ -581,11 +583,6 @@ textarea:focus {
   color: #ffffff;
   cursor: pointer;
 }
-
-
-
-
-
 
 /* FOOTER */
 .main {
@@ -606,7 +603,6 @@ textarea:focus {
   align-items: center;
   margin-left: 30px;
   margin-top: 2px;
-
 }
 
 .footer_links a {
@@ -708,9 +704,7 @@ textarea:focus {
   border: 1px solid black;
 }
 
-
 /* ----------------------------- */
-
 
 .admin {
   width: 100%;
@@ -758,7 +752,7 @@ textarea:focus {
 .admin__submit-btn {
   padding: 10px;
   font-size: 18px;
-  background-color: #008CBA;
+  background-color: #008cba;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -766,7 +760,7 @@ textarea:focus {
 }
 
 .admin__submit-btn:hover {
-  background-color: #005F6B;
+  background-color: #005f6b;
 }
 
 /* --------------------login------------------- */
@@ -954,45 +948,60 @@ th {
 
 } */
 
-
-
-/* button {
-
-  background-color: #4CAF50;
+button {
+  background-color: #4caf50;
 
   color: white;
 
   border: none;
-
+  text-align: center;
   padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
+
+  cursor: pointer;
+}
+#header_add {
+  background-color: #4caf50;
+  outline: none;
+  width: 100px;
+  border: none;
+  border-radius: 2px;
+}
+#header_add:hover {
+  border: 1px solid #4caf50;
+  width: 100px;
+
+  background-color: #fff;
+  color: black;
+  border-radius: 2px;
+}
+
+button:hover {
+  border: none;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   border-radius: 0.25rem;
 
   cursor: pointer;
-
-} */
-
-
-
-button:hover {
-
-  background-color: #3e8e41;
-
+  background-color: #fefefe;
+  border: 1.3px solid #4caf50;
+  color: black;
 }
 
-
-
 label {
-
   display: block;
 
   margin-bottom: 0.5rem;
 
   font-weight: bold;
-
 }
-
-
 
 /* input,
 
@@ -1026,13 +1035,13 @@ select:focus {
 
 } */
 
-
-
 .video {
   width: 310px;
   height: 200px;
   border-radius: 10px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .addCourse_main {
@@ -1044,33 +1053,42 @@ select:focus {
 }
 
 .addCourse {
-  padding: 50px;
+  padding: 60px;
   background-color: #efeeeefe;
   display: flex;
+  margin-top: 50px;
   border-radius: 20px;
   flex-direction: column;
   justify-content: center;
   width: 500px;
-  align-items: c;
   border: none;
-  height: 400px;
+  height: 430px;
   font-size: 19px;
   box-shadow: rgba(40, 39, 39, 0.2) 0px 2px 8px 0px;
 }
 
 .addCourse button {
   margin-top: 20px;
-  border-radius: 10px;
-  margin-left: 100px;
-  width: 200px;
+  border-radius: 5px;
+  width: 170px;
+  margin-bottom: 20px;
+}
+.del_btn {
+  background-color: rgb(192, 68, 68);
+  height: 35px;
+}
+.del_btn:hover {
+  border: 1px solid rgb(192, 68, 68);
 }
 
 .addCourse input {
   border-radius: 4px;
-  text-align: center;
-  margin-bottom: 10px;
-}
 
+  border: none;
+  padding: 5px 5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
 
 .addCourse h2 {
   margin-top: 20px;
@@ -1090,8 +1108,6 @@ select:focus {
 }
 
 .addedCourse table {
-  border: 1px solid red;
-
 }
 
 #courses {
@@ -1118,6 +1134,27 @@ select:focus {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
+  background-color: #04aa6d;
   color: white;
+}
+
+.shopcontainer {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-basis: 4;
+}
+#course {
+  width: 320px;
+  padding: 30px;
+  background: rgba(244, 244, 244, 0.811);
+  border: 1px solid #04aa6d;
+  margin: 10px;
+  border-radius: 10px;
+  transition: all ease-in 0.2s;
+}
+
+#course:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-bottom: 4px solid darkcyan;
 }

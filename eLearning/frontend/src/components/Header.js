@@ -1,18 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "../App.css";
+const Header = ({ onSearch }) => {
+  const [searchValue, setSearchValue] = useState("");
 
-const Header = () => {
+  const handleSearchInputChange = (event) => {
+    setSearchValue(event.target.value);
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    onSearch(searchValue);
+  };
+
   return (
     <div>
       {/* Top Header */}
+      {/* ... Top header code ... */}
 
       {/* Header */}
       <div className="header">
         <div className="container">
-          {/* MOBILE HEADER */}
           <div className="mobile-header">
             <div className="container ">
-              <div className="row ">
+              <div
+                className="row "
+                style={{ display: "flex", justifyContent: "space-between" }}
+              >
                 <div className="col-6 d-flex align-items-center">
                   <Link className="navbar-brand" to="/">
                     <img alt="logo" src="/images/logo.png" />
@@ -29,7 +43,7 @@ const Header = () => {
                     >
                       <i class="fas fa-user"></i>
                     </button>
-                    <div className="dropdown-menu">
+                    <div className="dropdown-menu" id="header_add">
                       <Link className="dropdown-item" to="/profile">
                         Profile
                       </Link>
@@ -44,66 +58,68 @@ const Header = () => {
                     <span className="badge">4</span>
                   </Link>
                 </div>
-                <div className="col-12 d-flex align-items-center">
-                  <form className="input-group">
-                    <input
-                      type="search"
-                      className="form-control rounded search"
-                      placeholder="Search"
-                    />
-                    <button type="submit" className="search-button">
-                      search
-                    </button>
-                  </form>
-                </div>
               </div>
             </div>
           </div>
 
           {/* PC HEADER */}
           <div className="pc-header">
-            <div className="row">
-              <div className="col-md-3 col-4 d-flex align-items-center">
-                <Link className="navbar-brand" to="/">
-                  <img alt="logo" src="/images/logo.png" />
-                </Link>
-              </div>
-              <div className="col-md-6 col-8 d-flex align-items-center">
-                <form className="input-group">
-                  <input
-                    type="search"
-                    className="form-control rounded search"
-                    placeholder="Search"
-                  />
-                  <button type="submit" className="search-button">
-                    search
-                  </button>
-                </form>
-              </div>
-              <div className="col-md-3 d-flex align-items-center justify-content-end Login-Register">
-                <div className="btn-group">
-                  <button
-                    type="button"
-                    className="name-button dropdown-toggle"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    User
-                  </button>
-                  <div className="dropdown-menu">
-                    <Link className="dropdown-item" to="/">
-                      User
-                    </Link>
-
-                    <Link className="dropdown-item" to="/login">
-                      Admin
-                    </Link>
-
-                  </div>
+            <div
+              className="pc-header"
+              style={{
+                backgroundColor: "grey",
+                borderRadius: "2px",
+              }}
+            >
+              <div
+                className="row"
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  marginLeft: "20px",
+                  padding: "5px",
+                }}
+              >
+                <div
+                  className="col-md-3 col-4 d-flex align-items-center"
+                  style={{
+                    width: "150px",
+                  }}
+                >
+                  <Link className="navbar-brand" to="/">
+                    <img
+                      alt="logo"
+                      src="/images/logo.png"
+                      style={{ borderRadius: "50%" }}
+                    />
+                  </Link>
                 </div>
 
+                {/* Search Bar */}
 
+                <div className="col-md-3 d-flex align-items-center justify-content-end Login-Register">
+                  <div className="btn-group">
+                    <button
+                      id="header_add"
+                      type="button"
+                      className="name-button dropdown-toggle"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      User
+                    </button>
+                    <div className="dropdown-menu">
+                      <Link className="dropdown-item" to="/">
+                        User
+                      </Link>
+
+                      <Link className="dropdown-item" to="/login">
+                        Admin
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
